@@ -1,7 +1,7 @@
 
 # RIFT2: Speeding-up RIFT with A New Rotation-Invariance Technique
 
-RIFT2 is a Python implementation for multimodal image matching and rotation-invariant feature detection using phase congruency. This project is structured to handle various types of images and provides a comprehensive feature matching and orientation calculation toolkit.
+RIFT2 is a Python implementation for multimodal image matching and rotation-invariant feature detection using phase congruency.
 
 You can read more about the technique in the paper ["RIFT2: Speeding-up RIFT with A New Rotation-Invariance Technique"](https://arxiv.org/abs/2303.00319).
 
