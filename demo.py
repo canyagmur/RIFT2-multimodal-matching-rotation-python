@@ -20,7 +20,7 @@ print("RIFT2 pipeline time elapsed {} seconds".format(end_time - start_time))
 
 # Perform keypoint matching
 time1 = time.time()
-points1, points2, mutual_matches = match_keypoints_nn(des1, des2, kp1, kp2, lowes_ratio=0.9, mutual=False)
+points1, points2, mutual_matches = match_keypoints_nn(des1, des2, kp1, kp2, lowes_ratio=0.95, mutual=False)
 time2 = time.time()
 print("Matching time elapsed {} seconds".format(time2 - time1))
 
