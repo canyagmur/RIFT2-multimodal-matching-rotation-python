@@ -16,20 +16,20 @@ rift2_pipeline = RIFT2()
 kp1, des1, kp2, des2 = rift2_pipeline(img1, img2)
 end_time = time.time()
 #print information
-print("RIFT2 pipeline time elapsed {} seconds".format(end_time - start_time))
+print("RIFT2 pipeline time elapsed {:.3f} seconds".format(end_time - start_time))
 
 # Perform keypoint matching
 time1 = time.time()
 points1, points2, mutual_matches = match_keypoints_nn(des1, des2, kp1, kp2, lowes_ratio=0.95, mutual=False)
 time2 = time.time()
-print("Matching time elapsed {} seconds".format(time2 - time1))
+print("Matching time elapsed {:.3f} seconds".format(time2 - time1))
 
 # Outlier removal using MAGSAC
 time1 = time.time()
 inliers1, inliers2, matchesMask = outlier_removal(points1, points2)
 time2 = time.time()
-print("Outlier removal time elapsed {} seconds".format(time2 - time1))
-print("Total time elapsed {} seconds".format(time2 - start_time))
+print("Outlier removal time elapsed {:.3f} seconds".format(time2 - time1))
+print("Total time elapsed {:.3f} seconds".format(time2 - start_time))
 # Draw matches
 draw_matches(img1, img2, kp1, kp2, mutual_matches, matchesMask)
 
